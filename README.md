@@ -1,22 +1,41 @@
-# @amjs/templater
+# @amjs/templater 0.1.2
 
-Running Handlebars, completes a template and returns its content in plain text.
+![Statements](https://img.shields.io/badge/Statements-100%25-brightgreen.svg) ![Branches](https://img.shields.io/badge/Branches-100%25-brightgreen.svg) ![Functions](https://img.shields.io/badge/Functions-100%25-brightgreen.svg) ![Lines](https://img.shields.io/badge/Lines-100%25-brightgreen.svg)
+
+> Running Handlebars, completes a template and returns its content in plain text
 
 ## Installation
 
 ```bash
 $ npm i @amjs/templater
 ```
+## Usage
 
-## Use
+#### With Handlebars file
 
-Given following [Handlebars](https://handlebarsjs.com/) template:
 ```handlebars
+{{!-- HandlebarsFile.hbs --}}
 {{value}}
 ```
 
-Within your code:
 ```javascript
+// Using Handlebars file
+const path = require('path');
 const templater = require('@amjs/templater');
-console.log(templater('path_to_hbs_file', { value : 'It works!' })); // It works!
+const hbsFile = path.resolve('HandlebarsFile.hbs');
+
+console.log(templater(hbsFile, { value: 1000 }));
+// <!-- HandlebarsFile.hbs -->
+// 1000
+```
+
+#### With Handlebars plain text template
+
+```javascript
+// Using Handlebars file
+const templater = require('@amjs/templater');
+const template = '{{value}}';
+
+console.log(templater(hbsFile, { value: 1000 }));
+// 1000
 ```
