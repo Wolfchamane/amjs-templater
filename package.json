@@ -1,6 +1,6 @@
 {
     "name": "@amjs/templater",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "license": "MIT",
     "description": "Running Handlebars, completes a template and returns its content in plain text",
     "main": "src/templater.js",
@@ -9,20 +9,24 @@
         "templates",
         "handlebars"
     ],
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:Wolfchamane/amjs-templater.git"
+    },
     "dependencies": {
-        "handlebars": "^4.2.0"
+        "handlebars": "^4.6.0"
     },
     "devDependencies": {
-        "@amjs/create-readme": "^0.1.0",
-        "@babel/core": "^7.6.0",
-        "@babel/preset-env": "^7.6.0",
-        "@babel/register": "^7.6.0",
+        "@amjs/create-readme": "^0.1.1",
+        "@babel/core": "^7.7.7",
+        "@babel/preset-env": "^7.7.7",
+        "@babel/register": "^7.7.7",
         "@istanbuljs/nyc-config-babel": "^2.1.1",
         "babel-eslint": "^10.0.3",
         "babel-plugin-istanbul": "^5.2.0",
-        "eslint": "^6.3.0",
+        "eslint": "^6.8.0",
         "nyc": "^14.1.1",
-        "prettier": "^1.18.2"
+        "prettier": "^1.19.1"
     },
     "scripts": {
         "test": "NODE_ENV=testing nyc node tests/index.js",
