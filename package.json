@@ -1,6 +1,6 @@
 {
     "name": "@amjs/templater",
-    "version": "0.1.5",
+    "version": "0.1.6",
     "license": "MIT",
     "description": "Running Handlebars, completes a template and returns its content in plain text",
     "main": "src/templater.js",

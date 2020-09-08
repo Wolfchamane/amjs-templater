@@ -1,4 +1,4 @@
-# @amjs/templater 0.1.5
+# @amjs/templater 0.1.6
 
 
 
