@@ -1,12 +1,10 @@
-const fs            = require('fs');
-const Handlebars    = require('handlebars');
+const Handlebars = require('handlebars');
 
 /**
  * Running Handlebars, completes a template and returns its content in plain text.
- * @module  @amjs/template
  * @param   {String}    source      Handlebars file (.hbs) or plain text template
  * @param   {Object}    context     Context to apply into template
- * @returns {String|null|undefined} `String` with template output, `null` or `undefined` in case of error.
+ * @return  {String|null|undefined} `String` with template output, `null` or `undefined` in case of error.
  */
 module.exports = (source = '', context = {}) =>
 {
@@ -15,6 +13,8 @@ module.exports = (source = '', context = {}) =>
 
     if (source.endsWith('.hbs'))
     {
+        /* eslint global-require : [0] */
+        const fs     = require('fs');
         const exists = fs.existsSync(source);
         if (exists)
         {
