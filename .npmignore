@@ -1,0 +1,10 @@
+.github
+tests/
+docs/
+.editorconfig
+.eslintrc.yml
+.eslintignore
+.babelrc
+.nycrc
+.prettier
+.gitignore

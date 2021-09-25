@@ -1,6 +1,6 @@
 # @amjs/templater 0.1.6
 
-
+![version](https://img.shields.io/npm/v/@amjs/templater?style=flat-square)
 
 > Running Handlebars, completes a template and returns its content in plain text
 
@@ -15,7 +15,7 @@ $ npm i @amjs/templater
 
 ```handlebars
 {{!-- HandlebarsFile.hbs --}}
-{{value}}
+Value is: {{value}}
 ```
 
 ```javascript
@@ -25,17 +25,16 @@ const templater = require('@amjs/templater');
 const hbsFile = path.resolve('HandlebarsFile.hbs');
 
 console.log(templater(hbsFile, { value: 1000 }));
-// <!-- HandlebarsFile.hbs -->
-// 1000
+// Value is: 1000
 ```
 
-#### With Handlebars plain text template
+#### With Handlebars-like plain text template
 
 ```javascript
 // Using Handlebars file
 const templater = require('@amjs/templater');
-const template = '{{value}}';
+const template = 'Value is: {value}}';
 
-console.log(templater(hbsFile, { value: 1000 }));
-// 1000
+console.log(templater(template, { value: 1000 }));
+// Value is: 1000
 ```
